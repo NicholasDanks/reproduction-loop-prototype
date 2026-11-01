@@ -1,0 +1,1 @@
+{"source":"new_replication_packages_MNSC7_unpacked/22-00832","entry":"simulation/sim_static.py","language":"python","notes":"Pyomo + IPOPT (not installed, not pip-installable without system headers); MATLAB/CVX for others. Expected: honest give-up. Pre-computed outputs ship in simulation/output (must not be counted)."}

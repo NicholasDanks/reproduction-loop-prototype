@@ -1,0 +1,7 @@
+{
+  "fx01_resilient":      {"kind": "python",      "label": "none (reference)",                  "shipped": {"runs": true,  "matches": true}},
+  "fx02_potemkin":       {"kind": "python",      "label": "pseudo data; runs, matches nothing", "shipped": {"runs": true,  "matches": false}},
+  "fx03_hidden_rng":     {"kind": "python",      "label": "hidden RNG stream dependency",       "shipped": {"runs": true,  "matches": true},  "after": {"runs": true,  "matches": false}},
+  "fx04_api_drift":      {"kind": "python-venv", "label": "unpinned pandas, removed APIs",      "shipped": {"runs": false, "matches": false}, "after": {"runs": true,  "matches": true}},
+  "fx05_stata_hardpath": {"kind": "stata",       "label": "hardcoded author path (A5.2)",       "shipped": {"runs": false, "matches": false}, "after": {"runs": true,  "matches": true}}
+}

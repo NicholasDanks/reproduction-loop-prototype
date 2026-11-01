@@ -1,0 +1,1 @@
+{"source":"new_replication_packages_MNSC3/23-02078","entry":"data_analysis/do_files/00_master.do","language":"stata","cwd":"data_analysis","notes":"Stata 15.1; master sets global dropbox by username switch, else empty -> $dropbox/raw_data resolves to /raw_data (fails). esttab prints to log. 13 figures pre-shipped in output_files (overwrite detection needed)."}

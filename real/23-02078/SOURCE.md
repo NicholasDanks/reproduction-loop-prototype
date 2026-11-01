@@ -1,0 +1,2 @@
+# 23-02078 ground truth
+Article: mnsc.2023.02078, Buser, Van Veldhuizen & Zhong, Table 1 p10 (pdftotext). Top panel TP preference: 0.189 (0.102), -0.239 (0.102), 0.249 (0.115), 0.260 (0.102), -0.045 (0.121); bottom panel: 0.182 (0.113), -0.229 (0.110), 0.250 (0.115), 0.252 (0.110), -0.103 (0.129); N=209. Duplicated SE values (0.102, 0.110) listed once. Figures 4-16 via graph export to output_files/ (pre-shipped copies exist; only overwritten files count). Table 2 (p11, 12 career options) not transcribed.

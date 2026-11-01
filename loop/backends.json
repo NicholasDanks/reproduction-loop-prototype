@@ -1,0 +1,60 @@
+{
+  "none": {
+    "type": "noop",
+    "note": "no agent; measures the deterministic BEFORE/AFTER pipeline only"
+  },
+  "claude": {
+    "type": "cli",
+    "default_model": "claude-sonnet-5",
+    "cmd": [
+      "claude",
+      "-p",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--setting-sources",
+      "local",
+      "--settings",
+      "{sandbox}",
+      "--strict-mcp-config",
+      "--disable-slash-commands",
+      "--tools",
+      "Read,Edit,Write,Glob,Grep,Bash",
+      "--permission-mode",
+      "acceptEdits",
+      "--allowedTools",
+      "Read,Edit,Write,Glob,Grep,Bash(python3:*),Bash(python:*),Bash(pip:*),Bash(pip3:*),Bash(.venv:*),Bash(./.venv:*),Bash(./:*),Bash(source:*),Bash(cd:*),Bash(which:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(diff:*),Bash(mkdir:*),Bash(cp:*),Bash(mv:*),Bash(rm:*),Bash(touch:*),Bash(chmod:*),Bash(find:*),Bash(grep:*),Bash(wc:*),Bash(echo:*),Bash(sed:*),Bash(awk:*),Bash(sort:*),Bash(uniq:*),Bash(env:*),Bash(export:*),Bash(timeout:*),Bash(bash:*),Bash(sh:*),Bash(jupyter:*),Bash(nbconvert:*),Bash(tar:*),Bash(unzip:*),Bash(gzip:*),Bash(file:*),Bash(stat:*),Bash(du:*),Bash(true:*),Bash(test:*),Bash(printf:*),Bash(xargs:*),Bash(MPLBACKEND=Agg:*),Bash(PYTHONPATH=:*),Bash(/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp:*),Bash(stata-mp:*),Bash(stata:*),Bash(Rscript:*),Bash(R:*),Bash(git status:*),Bash(git diff:*),Bash(git log:*)",
+      "--model",
+      "{model}",
+      "--max-turns",
+      "200",
+      "{prompt}"
+    ],
+    "note": "isolated (15 Oct 2026): no user/project settings, CLAUDE.md, skills, slash commands or MCP servers; exactly six tools; Bash still limited by the allowlist; no permission bypass; runs in a copy outside $HOME (ISO_ROOT); 200 turns. Before 15 Oct this backend had none of the isolation flags (see AUDIT_agent_isolation_2026-10-15.md). Bash sandbox from 22 Oct 2026 (run_loop.sandbox_settings): writes only in the run's isolation folder, home unreadable, registries-only network, no unsandboxed retry."
+  },
+  "gemini": {
+    "type": "cli",
+    "default_model": "gemini-2.5-pro",
+    "cmd": [
+      "gemini",
+      "-p",
+      "{prompt}",
+      "--approval-mode",
+      "yolo",
+      "-m",
+      "{model}"
+    ]
+  },
+  "ollama": {
+    "type": "openai",
+    "default_model": "qwen3:30b-a3b",
+    "base_url": "http://localhost:11434/v1",
+    "api_key_env": ""
+  },
+  "openai_compatible": {
+    "type": "openai",
+    "default_model": "",
+    "base_url": "${OPENAI_BASE_URL}",
+    "api_key_env": "OPENAI_API_KEY"
+  }
+}

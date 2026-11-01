@@ -1,0 +1,1 @@
+{"article":"mnsc.2022.03335","claims":[{"id":"CSV","kind":"table","desc":"data_for_paper_results.csv: per-instance CRs feeding Figs 5-7","files":["data_for_paper_results.csv"]},{"id":"Fig5-TRCR","kind":"figure","desc":"Figure 5 TR-CR panel","files":["trcr_same_scale.pdf"]},{"id":"Fig5-FACR","kind":"figure","desc":"Figure 5 FA-CR panel","files":["facr_same_scale.pdf"]}]}

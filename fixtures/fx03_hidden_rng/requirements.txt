@@ -1,0 +1,1 @@
+# No third-party dependencies. Python standard library only. Tested with Python 3.12 and 3.14.

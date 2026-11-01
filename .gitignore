@@ -1,0 +1,7 @@
+.venv*/
+__pycache__/
+fixtures/*/output/*
+!fixtures/*/output/.gitkeep
+*.log
+_compval_run.do
+runs/*/

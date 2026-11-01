@@ -1,0 +1,1 @@
+{"source":"new_replication_packages_MNSC7_unpacked/23-02958","entry":"draw.py","language":"python","notes":"plt.show() only; prior study added run_all_figures.py patching show->savefig; 15 figure captions in article"}

@@ -1,0 +1,1 @@
+{"source":"new_replication_packages_MNSC7_unpacked/24-05365","entry":"CstrAtrb-Final-Main-Only.ipynb","language":"python","notes":"Notebook (kernel myenv); reads CRSP_DailyData_2000_2021.csv which is NOT shipped (licensed). Fama-French + MSCI ESG shipped. Expected: blocked on data."}
