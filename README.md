@@ -11,11 +11,13 @@ Prototype repository for the Organization Science "Call for Science" Stage-1 sub
   compares outputs to the paper tables by term, and reports the deterministic Tier A score beside the
   execution result. `tests/RESULTS.md` is its output.
 - `tools/` — the deterministic data generator and the OLS snippet the Python fixtures embed.
+- `core/` — the deterministic Tier A scorer and the Stata batch runner that the harness and the loop import.
 
 ## Requirements
 Python 3.12+ (stdlib) for fx01-03 and the harness; a venv with current pandas for fx04
 (`python3 -m venv .venv_fx04 && .venv_fx04/bin/pip install pandas numpy`); Stata 17+ for fx05.
-The deterministic scorer and Stata runner are read from `$COMPVAL_DIR` (the COMPVAL project).
+The deterministic scorer (`core/batch_assess_new.py`) and the Stata runner (`core/stata_runner.py`) ship in
+`core/`; set `$COMPVAL_DIR` only to use another copy.
 
 ## The loop (`loop/`)
 `loop/run_loop.py` runs the pre-registered protocol: deterministic BEFORE (fresh venv or Stata batch, run

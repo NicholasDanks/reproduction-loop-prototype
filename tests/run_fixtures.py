@@ -4,14 +4,14 @@ Level-1/2 fix (or perturbation), reruns, compares output tables to the paper tab
 and scores each package with the deterministic Tier A scorer. Stdlib only.
 
     python3 tests/run_fixtures.py            # writes tests/RESULTS.md, exit 1 on any expectation miss
-Env: COMPVAL_DIR (default ~/Documents/Projects/COMPVAL) for the scorer and the Stata runner.
+Env: COMPVAL_DIR (default: core/ in this repository) for the scorer and the Stata runner.
 """
 import csv, json, os, re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 FX = ROOT / "fixtures"
-COMPVAL = Path(os.environ.get("COMPVAL_DIR", Path.home() / "Documents/Projects/COMPVAL"))
+COMPVAL = Path(os.environ.get("COMPVAL_DIR", ROOT / "core"))
 STATA = Path("/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp")
 VENV_PY = ROOT / ".venv_fx04" / "bin" / "python"
 TOL = 1e-5

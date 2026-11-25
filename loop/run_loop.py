@@ -20,7 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from compare import compare
 
 ROOT = Path(__file__).resolve().parent.parent
-COMPVAL = Path(os.environ.get("COMPVAL_DIR", Path.home() / "Documents/Projects/COMPVAL"))
+COMPVAL = Path(os.environ.get("COMPVAL_DIR", ROOT / "core"))
 BACKENDS = json.load(open(ROOT / "loop" / "backends.json"))
 STATA = Path("/Applications/Stata/StataMP.app/Contents/MacOS/stata-mp")
 ISO_ROOT = Path(os.environ.get("COMPVAL_ISO_ROOT", "/private/tmp/compval_work"))   # agent work copies live here, outside $HOME
